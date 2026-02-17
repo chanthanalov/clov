@@ -5,6 +5,10 @@
 
 }
 
+.icon {
+    height: 100%;
+    width: 100%;
+}
 body {
     font-family: "Lucida Console", "Courier New", monospace;
     padding-top: 75px;
@@ -161,16 +165,35 @@ footer {
 
 /* WORKS PAGE STYLES */
 #works {
+    background-image: url(images/works-background.gif);
+    background-size: cover;
+    background-position: top;
+    color: white;
     padding: 100px;
-    text-align: left;
+    text-align: right;
     font-size: larger;
 }
 
 /* BLOG PAGE STYLES */
 #blog {
+    background-image: url(images/blog-background.gif);
+    background-size: cover;
+    background-position: bottom;
+    color: white;
     padding: 100px;
     text-align: left;
     font-size: larger;
+}
+
+#blog-section {
+    background-color: #cfcfcf;
+    display: flex;
+    gap: 30px;
+    padding: 40px;
+}
+
+#blog-box {
+    max-width: 10%;
 }
 
 /* CONTACT PAGE STYLES */
