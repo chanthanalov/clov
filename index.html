@@ -23,7 +23,7 @@
   <body>
     <section id="intro">
       <div>
-        <h1><span id="typewriter"></span></h1>
+        <h1><span class="typewriter"></span></h1>
         <br>
         <p>Welcome to my website!</p>
       </div>
@@ -92,4 +92,23 @@
       <p>&copy; 2025 Chanthana Lov. All rights reserved.</p>
     </footer>
   </body>
-</html>    
+</html>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    var i = 0;
+    var txt = 'Chanthana Lov';
+    var speed = 100;
+    var el = document.querySelector('.typewriter'); // select class
+
+    function typeWriter() {
+        if (i < txt.length) {
+            el.textContent += txt.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+        }
+    }
+
+    typeWriter();
+});
+</script>

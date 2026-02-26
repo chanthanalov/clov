@@ -23,10 +23,27 @@
 
     <body>
         <section id="projects">
-            <h1>Projects</h1>
+            <div>
+            <h1><span class="typewriter"></span></h1>
+        
+            </div>
             <br>
-            <p>This is the projects page where I will showcase my work.</p> 
+            <p>This is the projects page where I will showcase my projects!</p> 
 
+        </section>
+
+        <section id="temp-section">
+            <div class="temp-box"><a href="arcade.html">
+                <h2>Chanthana's Arcade</h2>
+                <p>(In Progress)</p>
+            </a></div>
+            <div class="temp-box">
+                <h2>TBC</h2>
+
+            </div>
+            <div class="temp-box">
+                <h2>TBC</h2>
+            </div>
         </section>
 
     <footer>
@@ -35,3 +52,22 @@
     </body>
 
 </html>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    var i = 0
+    var txt = 'print("hello world!")'   
+    var speed = 100 
+    var el = document.querySelector('.typewriter'); // select class
+
+    function typeWriter() {
+        if (i < txt.length) {
+            el.textContent += txt.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+        }
+    }
+
+    typeWriter();
+});
+</script>

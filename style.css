@@ -5,6 +5,16 @@
 
 }
 
+.typewriter::after {
+    content: '|';
+    animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0; }
+}
+
 .icon {
     height: 100%;
     width: 100%;
@@ -80,15 +90,7 @@ footer {
     width: 100vh;
 }
 
-#typewriter::after {
-    content: '|';
-    animation: blink 1.5s infinite;
-}
 
-@keyframes blink {
-    0%, 50%, 100% { opacity: 1; }
-    25%, 75% { opacity: 0; }
-}
 
 
 #about {
@@ -158,19 +160,26 @@ footer {
 
 /* PROJECT PAGE STYLES */
 #projects {
+    background-image: url(images/typing.gif);
+    background-size: cover;
+    background-position:center calc(50% - 275px);
+    filter: brightness(0.8);
+    color: white;
     padding: 100px;
-    text-align: left;
+    text-align: right;
     font-size: larger;
 }
+
 
 /* WORKS PAGE STYLES */
 #works {
     background-image: url(images/works-background.gif);
     background-size: cover;
-    background-position: top;
+    background-position: center;
+    filter: brightness(0.8);
     color: white;
     padding: 100px;
-    text-align: right;
+    text-align: center;
     font-size: larger;
 }
 
@@ -179,21 +188,11 @@ footer {
     background-image: url(images/blog-background.gif);
     background-size: cover;
     background-position: bottom;
+    filter: brightness(0.8);
     color: white;
     padding: 100px;
-    text-align: left;
+    text-align: right;
     font-size: larger;
-}
-
-#blog-section {
-    background-color: #cfcfcf;
-    display: flex;
-    gap: 30px;
-    padding: 40px;
-}
-
-#blog-box {
-    max-width: 10%;
 }
 
 /* CONTACT PAGE STYLES */
@@ -240,5 +239,75 @@ footer {
 
 .social-icons a:hover {
     transform: translateY(-5px);
+}
+
+
+
+/* P1: Chanthana's Arcade */
+#arcade {
+    background-image: url(images/arcade-background.gif);
+    background-size: cover;
+    background-position: 50% 70%;
+    color: white;
+    padding: 100px;
+    text-align: left;
+    font-size: larger;
+}
+
+/* NOTE: TEMP GRID STYLE */
+#temp-section { 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 40px 0;
+    gap: 20px;
+    margin: 20px 60px;
+}
+
+.temp-box {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    padding: 20px;
+    /* max of 3 per row */
+    flex: 0 1 calc(33.333% - 20px);
+    max-width: calc(33.333% - 20px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.temp-box a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* responsive: 2 per row on medium screens, 1 per row on small screens */
+@media (max-width: 900px) {
+  .temp-box {
+    flex: 0 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+}
+@media (max-width: 600px) {
+  .temp-box {
+    flex: 0 1 100%;
+    max-width: 100%;
+  }
+}
+
+
+/* BLOG PAGE TEMPLATE */
+
+
+#blog-title {
+    margin: 50px 0;
+    font-size: 1.5em;
+    text-align: center;
+    text-transform: uppercase;  
+}
+
+#blog-content {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin: 0 200px;
+    padding-bottom: 120px; /* space for fixed footer */
 }
 
